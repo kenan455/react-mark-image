@@ -13,7 +13,11 @@ const Container = styled.div`
     isReadOnly ? 'auto;' : 'pointer;'};
 `;
 
-function Rectangle(props: ShapeProps) {
+interface Border {
+  border?: string;
+}
+
+function Rectangle(props: ShapeProps, border: Border) {
   const {
     annotation: { geometry },
     children,
@@ -40,6 +44,8 @@ function Rectangle(props: ShapeProps) {
         top: `${geometry.y}%`,
         height: `${geometry.height}%`,
         width: `${geometry.width}%`,
+        border: isActive ? 'solid 1px black' : 'dashed 2px black',
+        boxShadow: isActive ? '0 0 1px 1px black inset' : '',
         ...(props.style || {}),
       }}
     >
