@@ -40,11 +40,6 @@ function Rectangle(props: ShapeProps) {
         top: `${geometry.y}%`,
         height: `${geometry.height}%`,
         width: `${geometry.width}%`,
-        border: isActive ? 'solid 1px black' : 'dashed 2px black',
-        boxShadow: isActive ? '0 0 1px 1px black inset' : '',
-        backgroundColor: isActive
-          ? 'rgba(128, 128, 128, 0.3)'
-          : 'rgba(128, 128, 128, 0.05)',
         ...(props.style || {}),
       }}
     >
