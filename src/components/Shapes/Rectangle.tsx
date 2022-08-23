@@ -13,11 +13,7 @@ const Container = styled.div`
     isReadOnly ? 'auto;' : 'pointer;'};
 `;
 
-interface Border {
-  border?: string;
-}
-
-function Rectangle(props: ShapeProps, border: Border) {
+function Rectangle(props: ShapeProps) {
   const {
     annotation: { geometry },
     children,
