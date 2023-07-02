@@ -19,7 +19,7 @@ export const withShapeWrapper = (
     const [mouseHovered, setMouseHovered] = useState<boolean>(false);
 
     const shouldShowContent =
-      editorMode === EditorMode.AnnotateWithText &&
+      editorMode === (EditorMode.AnnotateWithText || EditorMode.ReadOnlyWithContent) &&
       mouseHovered &&
       renderContent;
 
