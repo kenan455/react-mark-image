@@ -143,7 +143,6 @@ export enum EditorMode {
   AnnotateOnly = 'AnnotateOnly',
   ReadOnlyWithSelection = 'ReadOnlyWithSelection',
   ReadOnly = 'ReadOnly',
-  ReadOnlyWithContent = 'ReadOnlyWithContent'
 }
 
 export enum SelectionMode {
